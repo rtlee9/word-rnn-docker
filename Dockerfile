@@ -35,9 +35,9 @@ RUN luarocks install underscore.lua --from=http://marcusirven.s3.amazonaws.com/r
 RUN luarocks install lrexlib-pcre PCRE_LIBDIR=/lib/x86_64-linux-gnu
 
 WORKDIR /root
-RUN git clone https://github.com/larspars/word-rnn.git
+RUN git clone https://github.com/rtlee9/Trump-bot.git
 
-WORKDIR word-rnn
+WORKDIR Trump-bot
 RUN wget http://nlp.stanford.edu/data/glove.6B.zip
 RUN mkdir util/glove
 RUN fastjar xvf glove.6B.zip
