@@ -36,4 +36,9 @@ RUN luarocks install lrexlib-pcre PCRE_LIBDIR=/lib/x86_64-linux-gnu
 
 WORKDIR /root
 RUN git clone https://github.com/larspars/word-rnn.git
+
 WORKDIR word-rnn
+RUN wget http://nlp.stanford.edu/data/glove.6B.zip
+RUN mkdir util/glove
+RUN fastjar xvf glove.6B.zip
+RUN mv glove.6B.200d.txt util/glove/vectors.6B.200d.txt
