@@ -42,3 +42,4 @@ RUN wget http://nlp.stanford.edu/data/glove.6B.zip
 RUN mkdir util/glove
 RUN fastjar xvf glove.6B.zip
 RUN mv glove.6B.200d.txt util/glove/vectors.6B.200d.txt
+RUN rm glove*
